@@ -63,8 +63,8 @@ for i in range(len(a)):
 
 print(count)
 
-
-count = o
+a = [5, 4, 5, 3, 2, 5, 5, 4, 5, 4, 3, 5]
+count = 0
 summ = 0
 for i in range(len(a)):
     count += 1
