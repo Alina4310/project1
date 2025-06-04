@@ -62,3 +62,12 @@ for i in range(len(a)):
         count += 1
 
 print(count)
+
+
+count = o
+summ = 0
+for i in range(len(a)):
+    count += 1
+    summ += a[i]
+
+print(summ / count)
