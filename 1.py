@@ -43,3 +43,15 @@ else:
     print("Incorrect")
 mark = (score/total_questions)*100
 print(mark)
+
+
+
+
+a = [23, 344, 243, 2, 8667, 43, 45, 1, 17, 55, 62]
+for i in range(len(a)):
+    if a[i] % 2 ==0:
+        print(a[i])
+        a[i] = 0
+    if a[i] % 2 == 1:
+        a[i] = 1
+print(a)
