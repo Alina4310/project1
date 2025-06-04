@@ -1,14 +1,3 @@
-question = "Какой сегодня месяц?"
-right_answer = "июнь"
-k = 0
-print(question)
-user_answer = input()
-while user_answer != right_answer:
-    print("Wrong! Try again.")
-    user_answer = input()
-    k = k + 1
-print("Well done, you used ",k," tries")
-
 from random import *
 
 N = randint(1, 10)
@@ -21,14 +10,15 @@ while Lives > 0:
     if user_answer == N:
         print("Победа!")
         break
-    elif N > user_answer:
+    elif N > user_answer and Lives > 1:
         print("Загаданное число больше")
-    else:
+    elif N < user_answer and Lives > 1:
         print("Загаданное число меньше")
     Lives -= 1
     if user_answer < 1 or user_answer > 10:
         print("Число должно быть от 1 до 10 включительно")
         Lives += 1
-
+if Lives == 0:
+    print("Вы проиграли")
 print ("Было загадано число", N)
 print("Конец игры.")
