@@ -1,0 +1,8 @@
+import random
+print("хотите бросить кубик?")
+useranswer = input()
+if useranswer == "да":
+    number = random.randint(1, 7)
+    print("выпало число", number)
+else:
+    print("пока")
