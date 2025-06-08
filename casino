@@ -1,0 +1,37 @@
+from random import randint 
+
+balance = 1000
+
+while balance > 0:
+    print("Ваш баланс —", balance)
+    money = int(input("Сколько поставите? "))
+
+    if money > balance:
+        print("У вас нет столько денег!")
+        continue
+
+    print("Выберите число от 1 до 10")
+    useranswer = int(input())
+
+    # Генерируем новые случайные числа каждый раз
+    a = randint(1, 11)
+    b = randint(1, 11)
+    c = randint(1, 11)
+
+    if useranswer == c:
+        win = money * 3
+        balance += win
+        print("Золотое число! Ваша ставка утроена!")
+    elif useranswer == a or useranswer == b:
+        win = money * 2
+        balance += win
+        print("Вы выиграли! Ваша ставка удвоена!")
+    else:
+        balance -= money
+        print("Вы проиграли!")
+
+    print("Числа были —", a, b, c)
+    print("Ваш баланс —", balance)
+    print("———")
+
+print("Вы проиграли все деньги :(")
