@@ -1,0 +1,3 @@
+date = int(input("What year were you born?"))
+age = 2025 - date
+print("your age is", age)
